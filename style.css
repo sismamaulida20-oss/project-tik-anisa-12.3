@@ -1,0 +1,582 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eef7f5;
+    color: #263238;
+    padding-bottom: 85px;
+}
+
+
+/* HEADER */
+
+header {
+    background: #176b5b;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+    background: white;
+    color: #176b5b;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+header h1 {
+    font-size: 21px;
+}
+
+header p {
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.page > h2 {
+    margin-bottom: 18px;
+}
+
+
+/* WELCOME */
+
+.welcome {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.06);
+}
+
+.welcome h2 {
+    color: #176b5b;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    line-height: 1.5;
+    color: #666;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.card {
+    background: white;
+    padding: 15px 8px;
+    text-align: center;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card span {
+    font-size: 27px;
+}
+
+.card h3 {
+    margin: 7px 0;
+    font-size: 14px;
+}
+
+.card p {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* INFO */
+
+.info-box {
+    background: #d9f1eb;
+    padding: 18px;
+    border-radius: 16px;
+    line-height: 1.6;
+}
+
+.info-box h3 {
+    color: #176b5b;
+    margin-bottom: 7px;
+}
+
+
+/* BUTTON */
+
+.main-button {
+    width: 100%;
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #176b5b;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* FORM */
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.06);
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 7px;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #176b5b;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+
+/* FOTO */
+
+input[type="file"] {
+    background: #f5f7f7;
+    cursor: pointer;
+}
+
+#previewFoto {
+    margin-top: 12px;
+}
+
+#previewFoto p {
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+#previewFoto img {
+    width: 100%;
+    max-height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+
+form button {
+    width: 100%;
+
+    margin-top: 18px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #176b5b;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* FASILITAS */
+
+.facility-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.facility {
+    background: white;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.05);
+}
+
+.facility h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.facility p {
+    font-size: 12px;
+    color: #777;
+}
+
+.facility span {
+    padding: 6px 10px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.baik {
+    background: #dff5e8;
+    color: #21854d;
+}
+
+.perawatan {
+    background: #fff0c9;
+    color: #9b7200;
+}
+
+
+/* JADWAL */
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.schedule-item {
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.05);
+}
+
+.date {
+    min-width: 58px;
+    height: 58px;
+
+    background: #176b5b;
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.date small {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.schedule-item h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.schedule-item p {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* RIWAYAT */
+
+.report {
+    background: white;
+
+    padding: 17px;
+
+    border-radius: 16px;
+
+    margin-bottom: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.05);
+}
+
+.report h3 {
+    color: #176b5b;
+    margin-bottom: 10px;
+}
+
+.report p {
+    font-size: 13px;
+    margin: 7px 0;
+    color: #555;
+}
+
+.report img {
+    width: 100%;
+    max-height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-top: 7px;
+}
+
+.status {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 6px 11px;
+
+    background: #fff0c9;
+    color: #916d00;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.empty {
+    background: white;
+
+    padding: 45px 20px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    color: #777;
+}
+
+.empty span {
+    font-size: 42px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* PROFIL */
+
+.profile {
+    background: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.06);
+}
+
+.school-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: auto auto 15px;
+
+    background: #d9f1eb;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+}
+
+.profile h2 {
+    color: #176b5b;
+    margin-bottom: 6px;
+}
+
+.profile > p {
+    color: #777;
+}
+
+.profile-info {
+    text-align: left;
+
+    margin-top: 25px;
+
+    background: #f1f5f4;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    line-height: 1.7;
+}
+
+.profile-info p {
+    margin-bottom: 12px;
+}
+
+
+/* NAVIGASI */
+
+nav {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 74px;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+
+    border-top: 1px solid #ddd;
+
+    z-index: 100;
+
+    overflow-x: auto;
+}
+
+.nav-btn {
+    min-width: 70px;
+
+    border: none;
+    background: white;
+
+    color: #777;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+}
+
+.nav-btn span {
+    font-size: 20px;
+}
+
+.nav-btn small {
+    font-size: 10px;
+}
+
+.nav-btn.active {
+    color: #176b5b;
+    font-weight: bold;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+
+    main {
+        padding: 15px;
+    }
+
+    .cards {
+        gap: 7px;
+    }
+
+    .card {
+        padding: 13px 5px;
+    }
+
+    .card span {
+        font-size: 23px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+
+    .nav-btn {
+        min-width: 62px;
+    }
+}
